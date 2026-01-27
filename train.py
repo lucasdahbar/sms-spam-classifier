@@ -4,6 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.svm import LinearSVC
 
 def main():
     # carregar base limpa
@@ -12,7 +13,7 @@ def main():
     X = df["text_clean"]
     y = df["label"]
 
-    # split estratificado
+    # split
     X_train, X_test, y_train, y_test = train_test_split(
         X, y,
         test_size=0.2,
@@ -20,7 +21,7 @@ def main():
         stratify=y
     )
 
-    # pipeline TF-IDF + Naive Bayes
+
     model = Pipeline([
         ("tfidf", TfidfVectorizer(stop_words="english")),
         ("nb", MultinomialNB())
@@ -39,5 +40,9 @@ def main():
     print("Matriz de Confusão:\n")
     print(confusion_matrix(y_test, y_pred))
 
+    svm_model = Pipeline([
+        ("tfidf", TfidfVectorizer(stop_words="english")),
+        ("svm", LinearSVC())
+    ])
 if __name__ == "__main__":
     main()
