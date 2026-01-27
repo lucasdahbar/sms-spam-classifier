@@ -51,6 +51,14 @@ def main():
     
     # previsões
     y_pred_svm = svm_model.predict(X_test)
+
+    # métricas finais
+    print("\nSVM Linear")
+    print("Acurácia:", accuracy_score(y_test, y_pred_svm))
+    print("\nRelatório de Classificação:\n")
+    print(classification_report(y_test, y_pred_svm))
+    print("Matriz de Confusão:\n")
+    print(confusion_matrix(y_test, y_pred_svm))
     
     if __name__ == "__main__":
         main()
