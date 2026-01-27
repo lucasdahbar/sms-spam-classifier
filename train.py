@@ -44,5 +44,13 @@ def main():
         ("tfidf", TfidfVectorizer(stop_words="english")),
         ("svm", LinearSVC())
     ])
-if __name__ == "__main__":
-    main()
+
+    # treino
+    svm_model.fit(X_train, y_train)
+
+    
+    # previsões
+    y_pred_svm = svm_model.predict(X_test)
+    
+    if __name__ == "__main__":
+        main()
