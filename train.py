@@ -60,5 +60,18 @@ def main():
     print("Matriz de Confusão:\n")
     print(confusion_matrix(y_test, y_pred_svm))
     
+    # relatório Naive Bayes
+    report_nb = classification_report(y_test, y_pred, output_dict=True)
+    df_nb = pd.DataFrame(report_nb).transpose()
+    df_nb["modelo"] = "Naive Bayes"
+
+    # relatório SVM
+    report_svm = classification_report(y_test, y_pred_svm, output_dict=True)
+    df_svm = pd.DataFrame(report_svm).transpose()
+    df_svm["modelo"] = "SVM Linear"
+
+    df_compare = pd.concat([df_nb, df_svm])
+    compare_spam = df_compare.loc["1"][["precision", "recall", "f1-score", "modelo"]]
+    print(compare_spam)
 if __name__ == "__main__":
         main()
