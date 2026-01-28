@@ -33,7 +33,8 @@ def main():
     # previsões
     y_pred = model.predict(X_test)
 
-    # métricas
+    # métricas NB
+    print("\nNaive Bayes")
     print("Acurácia:", accuracy_score(y_test, y_pred))
     print("\nRelatório de Classificação:\n")
     print(classification_report(y_test, y_pred))
@@ -52,7 +53,7 @@ def main():
     # previsões
     y_pred_svm = svm_model.predict(X_test)
 
-    # métricas finais
+    # métricas SVM
     print("\nSVM Linear")
     print("Acurácia:", accuracy_score(y_test, y_pred_svm))
     print("\nRelatório de Classificação:\n")
