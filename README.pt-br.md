@@ -36,17 +36,6 @@ O projeto segue as seguintes etapas principais:
 - F1-score
 - Matriz de Confusão
 
-## Estrutura do Projeto
-
-sms-spam-classifier/
-├── data/
-│ ├── raw/
-│ └── processed/
-├── notebooks/
-├── src/
-└── README.md
-
-
 ## Resultados
 Os modelos apresentaram desempenho superior ao acaso, evidenciando a eficácia
 da vetorização de texto e do aprendizado supervisionado para o problema de
