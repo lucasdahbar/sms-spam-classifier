@@ -1,22 +1,38 @@
-# Detecção de SPAM com Naive Bayes
+# SMS Spam Classifier
 
-Projeto simples para aplicação de conceitos de Machine Learning na detecção de SPAM em mensagens SMS.
+This project implements a machine learning pipeline to classify SMS messages as
+spam or legitimate (ham). The goal is to explore text preprocessing techniques
+and evaluate supervised learning models for spam detection.
 
-O objetivo é classificar mensagens como **spam** ou **não spam**, utilizando a técnica **TF-IDF** para representação textual e o algoritmo **Naive Bayes** para classificação.
+📄 Read this README in portuguese: README.pt-br.md
+
+## Project Overview
+Spam detection is a classic text classification problem in machine learning.
+In this project, SMS messages are processed using natural language processing
+techniques and classified using supervised algorithms.
 
 ## Dataset
-- SMS Spam Collection Dataset (mensagens SMS rotuladas como spam ou ham)
+The dataset consists of labeled SMS messages, where each message is categorized
+as either spam or ham. The data is publicly available and commonly used for
+educational purposes in machine learning and NLP tasks.
 
-## Metodologia
-- Pré-processamento básico de texto
-- Vetorização com TF-IDF
-- Treinamento de um classificador Naive Bayes
-- Avaliação do modelo por meio de acurácia e matriz de confusão
+## Methodology
+The project follows these main steps:
+- Text preprocessing (lowercasing, tokenization, stopword removal)
+- Feature extraction using TF-IDF
+- Train-test split
+- Training supervised classification models
+- Model evaluation using standard metrics
 
-## Tecnologias utilizadas
-- Python
-- Pandas
-- Scikit-learn
+## Models Used
+- Multinomial Naive Bayes
+- Support Vector Machine (Linear SVM)
 
-## Observação
-Este projeto tem caráter didático e foi desenvolvido com o objetivo de revisar e aplicar os conteúdos estudados no curso.
+## Evaluation Metrics
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+## Project Structure
