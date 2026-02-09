@@ -35,16 +35,6 @@ The project follows these main steps:
 - F1-score
 - Confusion Matrix
 
-## Project Structure
-
-sms-spam-classifier/
-├── data/
-│ ├── raw/
-│ └── processed/
-├── notebooks/
-├── src/
-└── README.md
-
 ## Results
 The models achieved performance above a random baseline, demonstrating the
 effectiveness of text vectorization and supervised learning for spam detection.
