@@ -36,3 +36,26 @@ The project follows these main steps:
 - Confusion Matrix
 
 ## Project Structure
+
+sms-spam-classifier/
+├── data/
+│ ├── raw/
+│ └── processed/
+├── notebooks/
+├── src/
+└── README.md
+
+## Results
+The models achieved performance above a random baseline, demonstrating the
+effectiveness of text vectorization and supervised learning for spam detection.
+
+## Conclusion
+This project shows that classical machine learning models combined with basic
+NLP techniques can effectively address SMS spam classification. It also serves
+as a practical introduction to text-based machine learning pipelines.
+
+## Future Work
+- Experiment with additional text representations
+- Hyperparameter tuning
+- Evaluation with larger datasets
+- Comparison with deep learning approaches
